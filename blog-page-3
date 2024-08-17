@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blog</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" rel="stylesheet">
+	<link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+	<!-- headerコンテンツ -->
+	<header class="page-header">
+        <div class="header-container">
+            <div class="border-top">
+            <div class="header-logo">
+                <a href="index.html"><img src="images/site-logo.png" alt=""></a>
+            </div></div>
+            <!-- ミートボールメニュー -->
+            <div class="sp-nav-btn">
+                <div class="open-btn"></div>
+            </div>
+            <!-- navコンテンツ -->
+            <nav id="g-nav">
+                <div class="pc-nav">
+                    <ul class="header-list">
+                        <li class="nav-list_name"><a href="index.html">Top</a></li>
+                        <li class="nav-list_name"><a href="about.html">About</a></li>
+                        <li class="nav-list_name"><a href="works.html">Works</a></li>
+                        <li class="nav-list_name"><a href="blog.html">Blog</a></li>
+                        <li class="nav-list_name"><a href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="sns-icon">
+                        <p><span class="border-bottom">follow us</span></p>
+                        <div class="icon-flex">
+                            <a  class="fa-brands fa-twitter fa-xl" href="https://twitter.com/" target="_blank"></a>
+                            <a  class="fa-brands fa-instagram fa-xl" href="https://www.instagram.com/" target="_blank"></a>
+                        </div> 
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+	<div class="page-blog_top">
+		<div class="blog-container">
+			<div class="blog-title">
+				<img src="images/title_blog.png" alt="blog">
+			</div>
+			<div class="blog-box">
+				<p class="blog-hizuke">2022.08.13</p>
+				<div class="blog-pct">
+					<div class="sp-size"><img src="images/kamui-sp.jpg" alt=""></div>
+                    <div class="pc-size"><img src="images/kamui-pc.jpg" alt=""></div>
+				</div>
+				<div class="blog-text">
+					<p>京都文化博物館で行われたゴールデンカムイ展にいってきました。連載完結記念にLINE漫画で全話配信されていてそれをきっかけにゴールデンカムイにはまりました。展覧会では原画が飾られていて隅々まで近くでじっくりと見ることができました。また、実際にマンガで出てきたアイヌ伝統の食べ物、武器、服装などが模型として飾られていたり、昔の帝国陸軍や有名な人物の武器なども展示されていて、とても興味深い展示でした。実寸大のヒグマの剝製も展示されていて思っていた倍の大きさだったので昔の人がこれと戦っていたと思うと大自然の恐ろしさが身に染みて感じました…。色々と見ごたえのある展覧会で楽しかったです。
+					</p>
+				</div>
+				<div class="sakuhin-picter">
+					<div class="flex">
+						<div class="picter-box">
+							<img class="pear" src="images/kamui-2.jpg" alt="">
+							<p class="picter-explanation"><span class="shikaku">▲</span> 実際の原画</p>
+						</div>
+						<div class="picter-box">
+							<img class="pear" src="images/kamui-3.jpg" alt="">
+						</div>
+					</div>
+					<div class="flex">
+						<div class="picter-box">
+							<img class="pear" src="images/kamui-4.jpg" alt="">
+						</div>
+						<div class="picter-box">
+							<img class="pear" src="images/kamui-5.jpg" alt="">
+							<p class="picter-explanation"><span class="shikaku">▲</span> アイヌの伝統食サンプル</p>
+						</div>
+					</div>
+					<div class="flex">
+						<div class="picter-box">
+							<img class="pear" src="images/kamui-6.jpg" alt="">
+							<p class="picter-explanation"><span class="shikaku">▲</span> 白石の肖像画</p>
+						</div>
+						<div class="picter-box">
+							<img class="pear" src="images/kamui-7.jpg" alt="">
+							<p class="picter-explanation"><span class="shikaku">▲</span> ヒグマの剥製(実寸サイズ)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="btn">
+				<a href="blog.html"><p class="btn-text">return</p></a>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- contactコンテンツ -->
+	<div id="contact"></div>
+	<div class="page-contact fadeUp">
+		<div class="contact-container">
+			<div class="contact-title">
+				<img src="images/title_contact.png" alt="contact">
+			</div>
+			<div class="contact-lead">
+				<p>気軽にお問い合わせください！</p>
+			</div>
+			<div class="Form">
+				<div class="Form-Item">
+				  <p class="Form-Item-Label">
+					お名前<span class="Form-Item-Label-Required">必須</span>
+				  </p>
+				  <input type="text" class="Form-Item-Input" placeholder="例）内川舞美">
+				</div>
+				<div class="Form-Item">
+				  <p class="Form-Item-Label">メールアドレス<span class="Form-Item-Label-Required">必須</span></p>
+				  <input type="text" class="Form-Item-Input" placeholder="例）example@gmail.com">
+				</div>
+				<div class="Form-Item">
+				  <p class="Form-Item-Label">電話番号<span class="Form-Item-Label-Required">必須</span></p>
+				  <input type="text" class="Form-Item-Input" placeholder="例）000-0000-0000">
+				</div>
+				<div class="Form-Item" style="padding-bottom:0 ;">
+				  <p class="Form-Item-Label isMsg">お問い合わせ内容<span class="Form-Item-Label-Required">必須</span></p>
+				  <textarea class="Form-Item-Textarea"></textarea>
+				</div>
+				<div class="btn">
+                    <p class="btn-text">send now</p>
+                </div>
+			</div>
+		</div>
+	</div>
+	<p class="btn-text" id="page-top"><a href="#"></a></p>
+	<!-- footerコンテンツ -->
+	<div class="page-footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="index.html"><img class="footer-logo_img" src="images/site-logo.png" alt=""></a>
+            </div>
+            <div class="footer-list">
+                <ul>
+                    <li class=""><a href="index.html">Top</a></li>
+                    <li class=""><a href="about.html">About</a></li>
+                    <li class=""><a href="works.html">Works</a></li>
+                    <li class=""><a href="blog.html">Blog</a></li>
+                    <li class=""><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>

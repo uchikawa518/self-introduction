@@ -1,0 +1,441 @@
+@charset "utf-8";
+
+
+.about-content{
+	margin-top: 110px;
+	.about-title{
+		text-align: center;
+		& img{
+			width: 160px;
+			// xl(1440px以上)
+			@include mq(xl){
+				width: 180px;
+			}
+		}
+	}
+	.about-box{
+		.about-Illust{
+			max-width: 600px;
+			margin: 40px auto 20px;
+			.hobby-Illust_img{
+				width: 100%;
+			}
+		}
+		.profile-box{
+			@include font-legular-bold;
+			max-width: 500px;
+			width: 80%;
+			margin: 40px auto;
+			.shikaku{
+				font-size: 13px;
+				color: $font-color;
+				margin-right: 10px;
+			}
+			.flex-item{
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 30px;
+			}
+			.hobby-item{
+				margin-bottom: 30px;
+				.hobby-icon{
+					margin-top: 20px;
+					.ichirow{
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: flex-start;
+						& img{
+							width: 60px;
+							margin-right: 10px;
+							margin-bottom: 20px;
+							// xl(1440px以上)
+							@include mq(xl){
+								margin-right: 20px;
+							}
+						}
+					}
+				}
+			}
+			.tool-item{
+				.tool-icon{
+					margin-top: 20px;
+					.ichirow{
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: flex-start;
+						& img{
+							width: 60px;
+							margin-right: 10px;
+							margin-bottom: 20px;
+							// xl(1440px以上)
+							@include mq(xl){
+								margin-right: 20px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.border{
+				border-bottom: 2px dashed $main-color;
+				margin: 50px auto;
+		}
+		.use-tool{
+			text-align: center;
+			&_title img{
+				width: 300px;
+			}
+			&_box{
+				max-width: 500px;
+				width: 90%;
+				margin: 0 auto;
+				.box-1{
+					background: $main-color;
+					width: 240px;
+					border-radius: 10px;
+					margin: 80px auto;
+					padding:30px 20px 20px 20px ;
+					.number{
+						position: absolute;
+						transform: translate(-163px, -53px);
+						width: 60px;
+					}
+					.title{
+						@include font-lage-bold;
+						margin-bottom: 20px;
+					}
+					.picter{
+						margin-bottom: 10px;
+						width: 150px
+					}
+					.lead{
+						@include font-legular;
+						text-align: justify;
+					}
+				}
+			}
+		}
+		.QandA-box{
+			max-width: 768px;
+			margin: 0 auto 160px;
+			position: relative;
+			z-index: 1002;
+			.title{
+				text-align: center;
+				.text{
+					margin-bottom: 10px;
+				}
+				.ashirai{
+					margin-bottom: 5px;
+					position: relative;
+					display: table-cell;
+					left: 78%;
+					padding: 0 3px;
+					@include font-legular-bold;
+					&::before,&::after{
+						content: '';
+						position: absolute;
+						top: 84%;
+						display: inline-block;
+						width: 20px;
+						height: 2px;
+						background-color: $font-color;
+						border-radius: 0.1px;
+					}
+					&::before{
+						left:0;
+						transform: rotate(42deg);
+					}
+					&::after{
+						right: 0;
+						transform: rotate(-42deg);
+					}
+					.ashirai-2{
+						position: relative;
+					    display: table-cell;
+					    padding: 0 30px;
+					    @include font-legular-bold;
+						&::before,&::after{
+							content: '';
+							position: absolute;
+							top: 50%;
+							display: inline-block;
+							width: 30px;
+							height: 2px;
+							background-color: $font-color;
+							border-radius: 0.1px;
+						}
+						&::before{
+							left:0;
+							transform: rotate(60deg);
+						}
+						&::after{
+							right: 0;
+							transform: rotate(-60deg);
+						}
+					}
+				}
+				.Q-A-img{
+					margin-bottom: 20px;
+					width: 310px;
+				}
+				.q-a-lead{
+					text-align: center;
+					margin: 0 auto;
+					width: 90%;
+					@include font-legular-bold;
+				}
+			}
+			// アコーディオン
+			.qa-container{
+				margin: 20px auto 0;
+				width: 90%;
+				.qa-list:not(:first-child) {
+					margin-top: 20px;
+					background: $main-color;
+					border-radius: 10px;
+					border: 1px solid $main-color;
+					.question-title {
+						@include font-legular-bold;
+						cursor: pointer;
+						padding: 20px 53px;
+						position: relative;
+						&:before {
+							position: absolute;
+							display: block;
+							width: 32px;
+							height: 32px;
+							border-radius: 30px;
+							content: 'Q';
+							top: 17px;
+							left: 12px;
+							color: $main-color;
+							background: $font-color;
+							@include font-xl;
+							text-align: center;
+						}
+						&:after {
+							position: absolute;
+							display: block;
+							content: '';
+							top: 35%;
+							right: 22px;
+							width: 8px;
+							height: 8px;
+							border-top: 2px solid #000;
+							border-right: 2px solid #000;
+							transform: rotate(135deg);
+							transition: all .3s ease-in-out;
+						}
+						&.open:after {
+							transform: rotate(-45deg);
+							top: 45%;
+						}
+					}
+					.answer-text {
+						border-top: 2px dotted #e7d1bb;
+						display: none;
+						padding: 20px 15px 20px 53px;
+						position: relative;
+						@include font-legular;
+						&:before {
+							position: absolute;
+							display: block;
+							width: 32px;
+							height: 32px;
+							border-radius: 30px;
+							content: 'A';
+							top: 18px;
+							left: 12px;
+							color: $main-color;
+							background: $accent-color;
+							text-align: center;
+							@include font-xl;
+						  }
+					}
+				}
+			}
+		}
+	}
+}
+
+// tb(768px以上)
+@include mq(tb){
+	.about-content{
+		.about-box{
+			.profile-box{
+				// lg(1280px以上)
+				@include mq(lg){
+					@include font-lage-bold;
+				}
+			}
+			.use-tool{
+				&_title img{
+					width: 300px;
+					// xl(1440px以上)
+					@include mq(xl){
+						width: 340px;
+					}
+				}
+				.use-tool_box{
+					display: flex;
+					max-width: 1024px;
+					// md(1024px以上)
+					@include mq(md){
+						max-width: 1280px;
+					}
+					// xl(1440px以上)
+					@include mq(xl){
+						margin: 0 auto;
+					}
+					.box-1{
+						width: 150px;
+						// md(1024px以上)
+						@include mq(md){
+							width: 200px;
+						}
+						// lg(1280px以上)
+						@include mq(lg){
+							width: 250px;
+						}
+						.number{
+							transform: translate(-119px, -56px);
+							width: 50px;
+							// md(1024px以上)
+							@include mq(md){
+								transform: translate(-140px, -57px);
+								width: 55px
+							}
+							// lg(1280px以上)
+							@include mq(lg){
+								transform: translate(-167px, -50px);
+								width: 60px
+							}
+						}
+						.title{
+							@include font-legular-bold;
+							// lg(1280px以上)
+							@include mq(lg){
+								@include font-lage-bold;
+							}
+							// xl(1440px以上)
+							@include mq(xl){
+								@include font-xl-bold;
+							}
+						}
+						.picter{
+							margin-bottom: 20px;
+							width: 100px;
+							// md(1024px以上)
+							@include mq(md){
+								width: 130px;
+							}
+							// lg(1280px以上)
+							@include mq(lg){
+								width: 150px;
+							}
+							// xl(1440px以上)
+							@include mq(xl){
+								width: 180px;
+							}
+						}
+						.lead{
+							@include font-legular;
+							// lg(1280px以上)
+							@include mq(lg){
+								@include font-lage;
+							}
+						}
+					}
+				}
+			}
+			.QandA-box{
+				max-width: 1024px;
+				// md(1024px以上)
+				@include mq(md){
+					max-width: 1440px;
+				}
+				.title{
+					.text{
+						.ashirai{
+							left: 95%;
+						}
+						.ashirai-2{
+							@include font-lage-bold;
+						}
+					}
+					.Q-A-img{
+						width: 320px;
+						// xl(1440px以上)
+						@include mq(xl){
+							width: 350px;
+						}
+					}
+					.q-a-lead{
+						@include font-lage-bold;
+					}
+				}
+				.qa-container{
+					width: 80%;
+					.qa-list:not(:first-child) {
+						margin-top: 30px;
+						.question-title {
+							@include font-legular-bold;
+							// lg(1280px以上)
+							@include mq(lg){
+								@include font-lage-bold;
+							}
+							padding: 25px 60px;
+							&:before {
+								top: 18px;
+								font-size: 21px;
+								width: 40px;
+								height: 40px;
+							}
+						}
+						.answer-text {
+							@include font-lage;
+							padding: 20px 15px 20px 59px;
+							&:before {
+								width: 40px;
+								height: 40px;
+								font-size: 21px;
+							  }
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// xl(1024px以上)
+@include mq(md){
+	.about-content{
+		.about-box{
+			.about-flex{
+				display: flex;
+				justify-content: center;
+				margin: 40px auto;
+				max-width: 1024px;
+				width: 75%;
+				// lg(1280px以上)
+				@include mq(lg){
+					margin: 80px auto;
+				}
+				// xl(1440px以上)
+				@include mq(xl){
+					margin: 80px auto;
+				}
+				.about-Illust{
+					margin: 0 30px 0 0;
+				}
+				.profile-box{
+					margin: 0 0 0 30px;
+					max-width: 400px;
+				}
+			}
+		}
+	}
+}

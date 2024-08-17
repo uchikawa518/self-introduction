@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+$main-color:#F5F0EA;
+$font-color:#3C3228;
+$accent-color:#E1B80D;
+$white-color:#ffffff;
+$font-lage:1.2rem;
+$font-legular:1rem;
+
+
+// breakpointの設定
+$mq-breakpoints:(
+    xl:1440px,
+    lg:1280px,
+    md:1024px,
+    tb:768px,
+    sm:576px,
+    xs:414px,
+    ) !default;
+
+// Media Queryの設定
+@mixin mq($breakpoint:md,$rule:min,$subtraction:false){
+    $breakpoint:map_get($mq-breakpoints,$breakpoint);
+
+    @if $rule==max and $subtraction{
+        $breakpoint:$breakpoint - 0.0625;
+    }
+
+    @media screen and (#{$rule}-width: $breakpoint) {
+        @content;
+    }
+}
+
+// 18px
+@mixin font-xl($size:18px){
+    font-size: $size;
+    font-weight: 450;
+}
+// 18px bold
+@mixin font-xl-bold($size:18px){
+    font-size: $size;
+    font-weight: bold;
+}
+// 16px
+@mixin font-lage($size:16px){
+    font-size: $size;
+    font-weight: 450;
+}
+// 16px bold
+@mixin font-lage-bold($size:16px){
+    font-size: $size;
+    font-weight: bold;
+}
+// 14px
+@mixin font-legular($size:14px){
+    font-size: $size;
+    font-weight: 450;
+}
+// 14px bold
+@mixin font-legular-bold($size:14px){
+    font-size: $size;
+    font-weight: bold;
+}

@@ -1,0 +1,50 @@
+
+.page-footer{
+    background: url("../images/footer-back.png");
+    background-size: auto;
+    padding: 40px 0 0 0;
+   transform: translate(0,-1rem);
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1001;
+}
+.footer-container{
+    text-align: center;
+    .footer-logo{
+        margin-bottom: 10px;
+        .footer-logo_img{
+            width: 130px;
+        }
+    }
+    .footer-list{
+       font-size: 1rem;
+       font-weight: bold;
+       // sm(576px以上)
+        @include mq(sm){
+           ul{
+            display: flex;
+            justify-content: space-around;
+            max-width: 400px;
+            margin: 0 auto;
+           } 
+        }
+       & li{
+        margin-bottom: 40px;
+       }
+       & a{
+       color: $font-color;
+       }
+    }
+}
+
+// tb(768px以上)
+@include mq(tb){
+    .footer-container{
+        .footer-logo{
+            .footer-logo_img{
+                width: 140px;
+            }
+        }
+    }
+}

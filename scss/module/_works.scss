@@ -1,0 +1,177 @@
+@charset "utf-8";
+
+.works-content{
+	margin: 110px 0 160px 0;
+	.works-title{
+		text-align: center;
+		margin-bottom: 40px;
+		& img{
+			width: 180px;
+		}
+	}
+	.box-sakuhin{
+		margin-bottom: 80px;
+		.sakuhin-title{
+			position: relative;
+			text-align: center;
+			font-size: 20px;
+			margin-top: 10px;
+			font-weight: bold;
+			margin-bottom: 30px;
+			& p{
+				color: #dba400;
+			}
+			// xl(1440px以上)
+			@include mq(xl){
+				font-size: 25px;
+				margin-bottom: 40px;
+			}
+			&::before{
+				position: absolute;
+				transform: translate(-19px, 38px);
+				width: 40px;
+				height: 2px;
+				content: '';
+				border-radius: 3px;
+				background: #dba400;
+				// xl(1440px以上)
+				@include mq(xl){
+					transform: translate(-19px, 45px);
+				}
+			}
+		}
+		.sakuhin-lead{
+			@include font-legular-bold;
+			margin-bottom: 20px;
+			text-align: center;
+			// md(768px以上)
+			@include mq(tb){
+				@include font-lage-bold;
+				margin-bottom: 40px;
+			}
+		}
+		.sakuhin-picter{
+			max-width: 500px;
+			width: 90%;
+			margin: 0 auto;
+			.picter-box{
+				margin: 0 auto 20px;
+				max-width: 400px;
+				text-align: center;
+				// md(768px以上)
+				@include mq(tb){
+					margin-bottom: 30px;
+				}
+				// xl(1440px以上)
+				@include mq(xl){
+					max-width: 500px;
+				}
+				.pear{
+					width: 100%;
+					margin-bottom: 10px;
+					// md(768px以上)
+					@include mq(tb){
+						margin-bottom: 30px;
+					}
+				}
+				.shimanami{
+					width: 250px;
+					margin-bottom: -10px;
+				}
+				.shimanami-2{
+					width: 200px;
+				}
+				.pear-2{
+					width: 100%;
+				}
+				.picter-explanation{
+					@include font-legular-bold;
+					text-align: left;
+					// md(768px以上)
+					@include mq(tb){
+						text-align: center;
+					}
+				}
+				// md(1024px以上)
+				@include mq(md){
+					.pixter-box-flex{
+						display: flex;
+						justify-content: center;
+						.kaeru{
+							width: 75%;
+							margin-right: 15px;
+						}
+						.kaeru-2{
+							width: 75%;
+						}
+						.mikan{
+							width: 60%;
+							margin-right: 15px;
+						}
+						.budou{
+							width: 60%;
+						}
+					}
+					.kosodate{
+						width: 75%;
+					}
+					.brooch{
+						width: 60%;
+					}
+					.bag{
+						width: 60%;
+					}
+				}
+			}
+		}
+		.sakuhin-text-box{
+			max-width: 400px;
+			width: 90%;
+			margin: 50px auto 0;
+			.shikaku-y{
+				font-size: 13px;
+				color: $accent-color;
+				margin-right: 10px;
+			}
+			.sakuhin-text-item{
+				margin-bottom: 20px;
+				.sakuhin-text-title{
+					@include font-legular-bold;
+					border-bottom: 2px dotted $main-color;
+					margin-bottom: 10px;
+					padding-bottom: 10px;
+					// md(768px以上)
+					@include mq(tb){
+						@include font-lage-bold;
+					}
+				}
+				.sakuhin-text-explanation{
+					@include font-legular;
+					// md(768px以上)
+					@include mq(tb){
+						@include font-lage;
+					}
+				}
+			}
+		}
+	}
+}
+
+// md(768px以上)
+@include mq(tb){
+	.works-content{
+		.box-sakuhin{
+			.sakuhin-picter{
+				max-width: 600px;
+				
+			}
+			.sakuhin-text-box{
+				max-width: 600px;
+				// xl(1440px以上)
+				@include mq(xl){
+					max-width: 700px;
+				}
+			}
+		}
+	}
+}

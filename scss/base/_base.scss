@@ -1,0 +1,25 @@
+@charset "utf-8";
+@import './variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    color: $font-color;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html{
+        scroll-behavior: smooth;
+    }
+}
+
+:target{
+    scroll-margin-top: 70px;
+}
+
